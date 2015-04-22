@@ -11,8 +11,8 @@ namespace GameAttempt9000
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
-        Texture2D sprite1;
-
+        Texture2D background;
+        Texture2D textbox1;
         public Game1()
             : base()
         {
@@ -43,7 +43,8 @@ namespace GameAttempt9000
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             // TODO: use this.Content to load your game content here
-            sprite1 = Content.Load<Texture2D>("272132-header");
+            background = Content.Load<Texture2D>("BlackBG.png");
+            textbox1 = Content.Load<Texture2D>("272132-header.jpg");
         }
 
         /// <summary>
@@ -80,7 +81,8 @@ namespace GameAttempt9000
 
             // TODO: Add your drawing code here
             spriteBatch.Begin();
-            spriteBatch.Draw(sprite1, new Rectangle(0,0, 200, 148), Color.White);
+            spriteBatch.Draw(background, new Rectangle(0,0, 800, 480), Color.White);
+            spriteBatch.Draw(textbox1, new Rectangle(200, 100, 400, 240), Color.White);
             spriteBatch.End();
             base.Draw(gameTime);
         }
