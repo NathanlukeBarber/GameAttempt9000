@@ -9,3 +9,8 @@ C:\Users\natha_000\Documents\GitHub\GameAttempt9000\GameAttempt9000\bin\WindowsG
 C:\Users\natha_000\Documents\GitHub\GameAttempt9000\GameAttempt9000\bin\WindowsGL\Debug\GameAttempt9000.pdb
 C:\Users\natha_000\Documents\GitHub\GameAttempt9000\GameAttempt9000\bin\WindowsGL\Debug\Content\272132-header.jpg
 C:\Users\natha_000\Documents\GitHub\GameAttempt9000\GameAttempt9000\bin\WindowsGL\Debug\Content\BlackBG.png
+C:\Users\natha_000\Documents\GitHub\GameAttempt9000\GameAttempt9000\bin\WindowsGL\Debug\Content\textbox1.png
+C:\Users\natha_000\Documents\GitHub\GameAttempt9000\GameAttempt9000\bin\WindowsGL\Debug\Content\textbox2.png
+C:\Users\natha_000\Documents\GitHub\GameAttempt9000\GameAttempt9000\bin\WindowsGL\Debug\Content\textbox3.png
+C:\Users\natha_000\Documents\GitHub\GameAttempt9000\GameAttempt9000\bin\WindowsGL\Debug\Content\textbox4.png
+C:\Users\natha_000\Documents\GitHub\GameAttempt9000\GameAttempt9000\bin\WindowsGL\Debug\Content\textbox5.png

@@ -1,7 +1,9 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
-
+//use swtich case for the number 
+//number will have what room im 
+//depending what room in load correct twxt before drawing
 namespace GameAttempt9000
 {
     /// <summary>
@@ -13,6 +15,7 @@ namespace GameAttempt9000
         SpriteBatch spriteBatch;
         Texture2D background;
         Texture2D textbox1;
+        int mapid = 1;
         public Game1()
             : base()
         {
@@ -43,8 +46,8 @@ namespace GameAttempt9000
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             // TODO: use this.Content to load your game content here
-            background = Content.Load<Texture2D>("BlackBG.png");
-            textbox1 = Content.Load<Texture2D>("272132-header.jpg");
+            if (mapid == 1) 
+            textbox1 = Content.Load<Texture2D>("textbox1.png");
         }
 
         /// <summary>
@@ -65,12 +68,96 @@ namespace GameAttempt9000
         {
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
+            // if at image 1, you can press L or R
+           
+            if (mapid == 1)
+            {
+                if (Keyboard.GetState().IsKeyDown(Keys.L))
+                {
+                    mapid = 2;
+                }
+                else if (Keyboard.GetState().IsKeyDown(Keys.R))
+                {
+                    mapid = 3;
+                }
+            }
 
-            // TODO: Add your update logic here
+             if (mapid == 2)
+               {
+                    textbox1 = Content.Load<Texture2D>("textbox2.png");
 
-            base.Update(gameTime);
-        }
+                    if (Keyboard.GetState().IsKeyDown(Keys.F))
+                    {
+                        mapid = 5;
+                    }
+                    else if (Keyboard.GetState().IsKeyDown(Keys.R))
+                    {
+                        mapid = 3;
+                    }
+                }
 
+            //gap
+
+                if (mapid == 3)
+                {
+                    textbox1 = Content.Load<Texture2D>("textbox3.png");
+
+                    if (Keyboard.GetState().IsKeyDown(Keys.R))
+                    {
+                        mapid = 4;
+                    }
+                    else if (Keyboard.GetState().IsKeyDown(Keys.F))
+                    {
+                        mapid = 5;
+                    }
+                }
+
+                if (mapid == 4)
+                {
+                    textbox1 = Content.Load<Texture2D>("textbox4.png");
+
+                    if (Keyboard.GetState().IsKeyDown(Keys.R))
+                    {
+                        mapid = 6;
+                    }
+                    else if (Keyboard.GetState().IsKeyDown(Keys.F))
+                    {
+                        mapid = 7;
+                    }
+                }
+
+                if (mapid == 5)
+                {
+                    textbox1 = Content.Load<Texture2D>("textbox5.png");
+
+                    if (Keyboard.GetState().IsKeyDown(Keys.F))
+                    {
+                        mapid = 7;
+                    }
+                    else if (Keyboard.GetState().IsKeyDown(Keys.R))
+                    {
+                        mapid = 4;
+                    }
+                }
+
+               /* if (mapid == 6)//win
+                {
+                    textbox1 = Content.Load<Texture2D>("272132-header.jpg");
+
+                    
+                }
+                if (mapid == 7)
+                {
+                    textbox1 = Content.Load<Texture2D>("BlackBG.png");
+
+                   
+                }*/
+                    // TODO: Add your update logic here
+
+                    base.Update(gameTime);
+            }
+
+        
         /// <summary>
         /// This is called when the game should draw itself.
         /// </summary>
@@ -81,8 +168,7 @@ namespace GameAttempt9000
 
             // TODO: Add your drawing code here
             spriteBatch.Begin();
-            spriteBatch.Draw(background, new Rectangle(0,0, 800, 480), Color.White);
-            spriteBatch.Draw(textbox1, new Rectangle(200, 100, 400, 240), Color.White);
+            spriteBatch.Draw(textbox1, new Rectangle(0, 0, 800, 500), Color.White);
             spriteBatch.End();
             base.Draw(gameTime);
         }
